@@ -21,10 +21,14 @@
         tools:layout="@layout/fragment_countdown" >
         <action
             android:id="@+id/action_countdownFragment_to_lieFragment"
-            app:destination="@id/lieFragment" />
+            app:destination="@id/lieFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_countdownFragment_to_truthFragment"
-            app:destination="@id/truthFragment" />
+            app:destination="@id/truthFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/truthFragment"

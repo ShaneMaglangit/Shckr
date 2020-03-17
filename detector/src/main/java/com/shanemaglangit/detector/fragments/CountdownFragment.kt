@@ -1,7 +1,5 @@
 package com.shanemaglangit.detector.fragments
 
-import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -11,7 +9,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.shanemaglangit.detector.R
 import com.shanemaglangit.detector.databinding.FragmentCountdownBinding
-import kotlin.random.Random
 
 class CountdownFragment : Fragment() {
     private lateinit var binding: FragmentCountdownBinding
@@ -22,7 +19,6 @@ class CountdownFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCountdownBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 
@@ -36,7 +32,7 @@ class CountdownFragment : Fragment() {
             }
 
             override fun onTick(millisUntilFinished: Long) {
-                binding.textCountdown.text = millisUntilFinished.toString()
+                binding.textCountdown.text = (millisUntilFinished / 1000).toString()
             }
         }.start()
     }
