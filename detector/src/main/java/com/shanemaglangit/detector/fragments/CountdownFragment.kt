@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.shanemaglangit.detector.R
 import com.shanemaglangit.detector.databinding.FragmentCountdownBinding
+import kotlin.random.Random
 
 class CountdownFragment : Fragment() {
     private lateinit var binding: FragmentCountdownBinding
@@ -24,10 +25,10 @@ class CountdownFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        countDownTimer = object: CountDownTimer(5000, 1000) {
+        countDownTimer = object: CountDownTimer(6000, 1000) {
             override fun onFinish() {
-                val result = (1 until 4).random()
-                if(result == 1) findNavController().navigate(R.id.action_countdownFragment_to_lieFragment)
+                val result = Random.nextFloat()
+                if(result <= 0.3) findNavController().navigate(R.id.action_countdownFragment_to_lieFragment)
                 else findNavController().navigate(R.id.action_countdownFragment_to_truthFragment)
             }
 
