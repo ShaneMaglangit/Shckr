@@ -1,2 +1,5 @@
 rootProject.name='Shckr'
 include ':app'
+include ':actions'
+include ':ui'
+include ':detector'

@@ -9,7 +9,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/actions" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/detector" />
+            <option value="$PROJECT_DIR$/ui" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,0 +1,5 @@
+<resources>
+    <string name="image_start_desc">Fingerprint scanner</string>
+    <string name="text_start">Tap to start</string>
+    image_start_desc
+</resources>

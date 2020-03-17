@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.shanemaglangit.detector.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_countdownFragment"
+            app:destination="@id/countdownFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countdownFragment"
+        android:name="com.shanemaglangit.detector.fragments.CountdownFragment"
+        android:label="fragment_countdown"
+        tools:layout="@layout/fragment_countdown" >
+        <action
+            android:id="@+id/action_countdownFragment_to_lieFragment"
+            app:destination="@id/lieFragment" />
+        <action
+            android:id="@+id/action_countdownFragment_to_truthFragment"
+            app:destination="@id/truthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/truthFragment"
+        android:name="com.shanemaglangit.detector.fragments.TruthFragment"
+        android:label="fragment_truth"
+        tools:layout="@layout/fragment_truth" />
+    <fragment
+        android:id="@+id/lieFragment"
+        android:name="com.shanemaglangit.detector.fragments.LieFragment"
+        android:label="fragment_lie"
+        tools:layout="@layout/fragment_lie" />
+</navigation>
