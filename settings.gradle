@@ -1,0 +1,2 @@
+rootProject.name='Shckr'
+include ':app'
