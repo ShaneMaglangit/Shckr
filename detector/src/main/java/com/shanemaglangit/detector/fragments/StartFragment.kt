@@ -18,5 +18,4 @@ class StartFragment : Fragment() {
         binding = FragmentStartBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
-
 }

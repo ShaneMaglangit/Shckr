@@ -1,5 +1,10 @@
 <resources>
     <string name="image_start_desc">Fingerprint scanner</string>
     <string name="text_start">Tap to start</string>
+    <string name="text_truth_sub">You are telling the</string>
+    <string name="text_truth">Truth</string>
+    <string name="text_lie_sub">You are telling a</string>
+    <string name="text_lie">Lie</string>
+    <string name="button_replay">Play again</string>
     image_start_desc
 </resources>

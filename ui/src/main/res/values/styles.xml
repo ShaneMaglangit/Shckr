@@ -11,5 +11,6 @@
         <item name="colorOnSecondary">@color/secondaryTextColor</item>
         <item name="colorAccent">@color/accentColor</item>
         <item name="android:colorBackground">@color/secondaryColor</item>
+        <item name="fontFamily">@font/viga</item>
     </style>
 </resources>
