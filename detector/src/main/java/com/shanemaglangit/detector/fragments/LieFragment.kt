@@ -8,9 +8,6 @@ import android.view.ViewGroup
 import com.shanemaglangit.detector.R
 import com.shanemaglangit.detector.databinding.FragmentLieBinding
 
-/**
- * A simple [Fragment] subclass.
- */
 class LieFragment : Fragment() {
     private lateinit var binding: FragmentLieBinding
 
