@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/actions" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/detector" />
+            <option value="$PROJECT_DIR$/instruction" />
             <option value="$PROJECT_DIR$/ui" />
           </set>
         </option>
