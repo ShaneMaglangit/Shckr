@@ -39,7 +39,7 @@ class CountdownFragment : Fragment() {
         val result = Random.nextFloat()
         countDownTimer = object: CountDownTimer(6000, 1000) {
             override fun onFinish() {
-                if(result <= 0.4) findNavController().navigate(R.id.action_countdownFragment_to_lieFragment)
+                if(result <= 0.45) findNavController().navigate(R.id.action_countdownFragment_to_lieFragment)
                 else findNavController().navigate(R.id.action_countdownFragment_to_truthFragment)
                 camera?.release()
             }
@@ -47,7 +47,7 @@ class CountdownFragment : Fragment() {
             override fun onTick(millisUntilFinished: Long) {
                 val secondsLeft = millisUntilFinished / 1000
                 binding.textCountdown.text = secondsLeft.toString()
-                if(secondsLeft.toInt() == 3 && result <= 0.4) flash()
+                if(secondsLeft.toInt() == 3 && result <= 0.45) flash()
             }
         }.start()
     }
