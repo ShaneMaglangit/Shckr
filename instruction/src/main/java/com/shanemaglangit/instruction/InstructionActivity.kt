@@ -32,9 +32,6 @@ class InstructionActivity : FragmentActivity() {
             Step("Ask a question to your friend.", R.drawable.ic_question),
             Step("Tap to start the detector.", R.drawable.ic_start)
         )
-        val detectorIntent = Actions.openDetectorIntent(this).apply{
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        }
 
         binding = ActivityInstructionBinding.inflate(layoutInflater)
 
@@ -47,16 +44,21 @@ class InstructionActivity : FragmentActivity() {
             }
         })
 
-        button_skip.setOnClickListener {
-            startActivity(detectorIntent)
-        }
+        button_skip.setOnClickListener { startNextActivity() }
 
         button_next.setOnClickListener {
             if(viewpager_steps.currentItem != steps.size - 1) viewpager_steps.currentItem += 1
-            else startActivity(detectorIntent)
+            else startNextActivity()
         }
 
         TabLayoutMediator(tab_layout_steps, viewpager_steps) { _, _ ->}.attach()
+    }
+
+    private fun startNextActivity() {
+        val detectorIntent = Actions.openDetectorIntent(this).apply{
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        startActivity(detectorIntent)
     }
 
     private inner class StepAdapter(fa: FragmentActivity, val steps: List<Step>) : FragmentStateAdapter(fa) {

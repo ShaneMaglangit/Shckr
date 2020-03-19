@@ -1,9 +1,11 @@
 package com.shanemaglangit.detector.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AlertDialogLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.shanemaglangit.detector.R

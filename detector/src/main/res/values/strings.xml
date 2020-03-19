@@ -6,5 +6,5 @@
     <string name="text_lie_sub">You are telling a</string>
     <string name="text_lie">Lie</string>
     <string name="button_replay">Start over</string>
-    image_start_desc
+    <string name="text_reminder">The intensity of the shock may vary based on your device\'s flash hardware.</string>
 </resources>

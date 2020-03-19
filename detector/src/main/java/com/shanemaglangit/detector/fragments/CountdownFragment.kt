@@ -37,7 +37,7 @@ class CountdownFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         val result = Random.nextFloat()
-        countDownTimer = object: CountDownTimer(6000, 1000) {
+        countDownTimer = object: CountDownTimer(6000, 500) {
             override fun onFinish() {
                 if(result <= 0.45) findNavController().navigate(R.id.action_countdownFragment_to_lieFragment)
                 else findNavController().navigate(R.id.action_countdownFragment_to_truthFragment)
@@ -47,7 +47,7 @@ class CountdownFragment : Fragment() {
             override fun onTick(millisUntilFinished: Long) {
                 val secondsLeft = millisUntilFinished / 1000
                 binding.textCountdown.text = secondsLeft.toString()
-                if(secondsLeft.toInt() == 3 && result <= 0.45) flash()
+                if(millisUntilFinished == 3500L && result <= 0.45) flash()
             }
         }.start()
     }
